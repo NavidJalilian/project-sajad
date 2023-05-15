@@ -7,6 +7,17 @@ const styles: StylesType<"root" | "content"> = {
     margin: "auto",
     fontFamily: "Outfit",
   },
+  tab: {
+    color: ({ palette }) => palette.primary.light,
+    "&.Mui-selected": {
+      color: ({ palette }) => palette.error.light,
+    },
+    "&.MuiTabs-indicator": {
+      "&.Mui-selected": {
+        color: ({ palette }) => palette.error.light,
+      },
+    },
+  },
   content: {
     // width: "fit-content",
     display: "flex",
