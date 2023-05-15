@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, TextField, Typography } from "@mui/material";
 import React from "react";
 import styles from "./Info.style";
 import InfoRightImg from "../../assets/images/info-right.jpg";
@@ -7,6 +7,8 @@ import InfoLeftImg from "../../assets/images/info-left.jpg";
 import apartmentIcon from "../../assets/images/apartment.svg";
 import copyIcon from "../../assets/images/copy.svg";
 import movieIcon from "../../assets/images/movie.svg";
+import DeskImg from "../../assets/images/desk.png";
+import RightArrowIcon from "../../assets/images/rightArrow.svg";
 
 export default function Info() {
   return (
@@ -46,8 +48,29 @@ export default function Info() {
         </Box>
       </Box>
       <Typography variant="h2" sx={styles.slogan}>
-        Our job, your spotlight.
+        Our job, <span className="textRed">your spotlight.</span>
       </Typography>
+
+      <Box sx={styles.newsLetter}>
+        <Box>
+          <Typography variant="h2" sx={styles.newsLetterText}>
+            Business Ideas, crazy ideas and marketing techniques
+            <span className="textRed"> straight to your inbox</span>
+          </Typography>
+          <Box sx={styles.inputGroup}>
+            <TextField
+              id="email"
+              variant="outlined"
+              placeholder="Email Address..."
+              sx={styles.emailInput}
+            />
+            <IconButton sx={styles.sendButton} disableRipple>
+              <img src={RightArrowIcon} width={22} height={20} />
+            </IconButton>
+          </Box>
+        </Box>
+        <img src={DeskImg} alt="Desk Img" />
+      </Box>
     </Box>
   );
 }

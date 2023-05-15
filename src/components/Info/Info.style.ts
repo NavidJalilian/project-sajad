@@ -85,6 +85,65 @@ const styles: StylesType<"root" | "features" | "images"> = {
       color: ({ palette }) => palette.primary.dark,
     },
   },
+  slogan: {
+    label: "slogan",
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 700,
+    fontSize: "70px",
+    lineHeight: "120.5%",
+    letterSpacing: "0.033em",
+    color: ({ palette }) => palette.primary.dark,
+    mt: "82px",
+    ".textRed": {
+      color: ({ palette }) => palette.error.main,
+    },
+  },
+  newsLetter: {
+    label: "newsLetter",
+    boxShadow: "-1px 1px 9px rgba(0, 0, 0, 0.25)",
+    borderRadius: "30px",
+    mx: "20px",
+    width: "90%",
+    pl: "42px",
+    mt: "86px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    img: {
+      width: "566px",
+      height: "293px",
+      borderRadius: "30px",
+    },
+  },
+  newsLetterText: {
+    label: "newsLetterText",
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "45.7709px",
+    lineHeight: "108%",
+    letterSpacing: "-0.027em",
+    maxWidth: "616px",
+    color: ({ palette }) => palette.primary.dark,
+    ".textRed": {
+      color: ({ palette }) => palette.error.main,
+    },
+  },
+  inputGroup: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-end",
+  },
+  emailInput: {
+    border: "1px solid #000000",
+    borderRadius: "20px",
+    maxWidth: "650px",
+  },
+  sendButton: {
+    backgroundColor: ({ palette }) => palette.primary.main,
+    lineHeight: 1,
+  },
 };
 
 export default styles;
