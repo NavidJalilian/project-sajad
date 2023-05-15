@@ -20,7 +20,16 @@ export default function Landing() {
 
   return (
     <Box>
-      <Box>
+      <Box
+        sx={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          zIndex: 1,
+          marginInlineStart: 2.75,
+          marginBlockStart: 1.5,
+        }}
+      >
         <Tabs
           centered
           value={value}
@@ -35,15 +44,8 @@ export default function Landing() {
           <Tab sx={styles.tab} label="case studies" {...a11yProps(2)} />
         </Tabs>
       </Box>
-      <Box
-        sx={{
-          position: "absolute",
-          inset: 0,
 
-          width: "100%",
-          zIndex: -1,
-        }}
-      >
+      <Box sx={{ maxWidth: " width: 100%" }}>
         <img src={HeroImg} alt="hero img" />
       </Box>
     </Box>
