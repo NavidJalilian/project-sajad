@@ -28,6 +28,7 @@ const styles: StylesType<"root" | "content"> = {
     maxWidth: "773px",
     fontSize: "40px",
     my: 4.5,
+    lineHeight: 0.98,
     color: ({ palette }) => palette.error.main,
   },
   button: {

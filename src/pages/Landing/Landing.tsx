@@ -37,9 +37,7 @@ export default function Landing() {
           sx={styles.root}
         >
           <Tab sx={styles.tab} label="about us" {...a11yProps(0)} />
-
           <Tab sx={styles.tab} label="services" {...a11yProps(1)} />
-
           <Tab sx={styles.tab} label="case studies" {...a11yProps(2)} />
         </Tabs>
       </Box>
@@ -58,7 +56,9 @@ export default function Landing() {
           justifyContent: "start",
         }}
       >
-        <Typography sx={styles.name}>Jacob Bowman</Typography>
+        <Typography sx={styles.name} component="h1">
+          Jacob Bowman
+        </Typography>
         <Typography sx={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus
           quam, facilisis id semper faucibus,
