@@ -2,21 +2,17 @@ import { StylesType } from "../../theme/type";
 
 const styles: StylesType<"root" | "content"> = {
   root: {
-    maxWidth: 800,
-    backgroundColor: ({ palette }) => palette.grey[100],
-    margin: "auto",
     fontFamily: "Outfit",
+    "& .MuiTabs-indicator": {
+      backgroundColor: ({ palette }) => palette.error.light,
+    },
   },
   tab: {
     color: ({ palette }) => palette.primary.light,
     "&.Mui-selected": {
       color: ({ palette }) => palette.error.light,
     },
-    "&.MuiTabs-indicator": {
-      "&.Mui-selected": {
-        color: ({ palette }) => palette.error.light,
-      },
-    },
+    fontFamily: "Outfit",
   },
   content: {
     // width: "fit-content",

@@ -1,7 +1,7 @@
 import { Box, Tab, Tabs } from "@mui/material";
 import React from "react";
 import styles from "./Landing.style";
-import HeroImg from "../../assets/images/heroImage.svg";
+import HeroImg from "../../assets/images/hero.png";
 
 export default function Landing() {
   const [value, setValue] = React.useState(0);
@@ -18,24 +18,19 @@ export default function Landing() {
 
   return (
     <Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Box>
         <Tabs
+          centered
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
-          sx={styles.tab}
+          sx={styles.root}
         >
-          <Tab sx={styles.tab} label="Item One" {...a11yProps(0)} />
+          <Tab sx={styles.tab} label="about us" {...a11yProps(0)} />
 
-          <Tab sx={styles.tab} label="Item Two" {...a11yProps(1)} />
+          <Tab sx={styles.tab} label="services" {...a11yProps(1)} />
 
-          <Tab sx={styles.tab} label="Item Three" {...a11yProps(2)} />
+          <Tab sx={styles.tab} label="case studies" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <Box
