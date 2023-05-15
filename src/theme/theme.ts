@@ -8,7 +8,7 @@ const customTheme = createTheme({
     },
     error: {
       light: "#ef233c",
-      main: "#d90429",
+      main: "#D90429",
     },
     grey: {
       "200": "#8d99ae",
