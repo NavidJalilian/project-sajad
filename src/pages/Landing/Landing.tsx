@@ -22,7 +22,6 @@ export default function Landing() {
         sx={{
           position: "absolute",
           inset: 0,
-          width: "100%",
           zIndex: 1,
           marginInlineStart: 2.75,
           marginBlockStart: 1.5,
@@ -43,7 +42,7 @@ export default function Landing() {
         </Tabs>
       </Box>
 
-      <Box sx={{ maxWidth: " width: 100%" }}>
+      <Box>
         <img src={HeroImg} alt="hero img" />
       </Box>
     </Box>
