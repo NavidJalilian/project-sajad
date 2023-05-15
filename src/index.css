@@ -1,0 +1,15 @@
+:root {
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(206, 94%, 87%);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
