@@ -5,6 +5,7 @@ const customTheme = createTheme({
     primary: {
       main: "#333333",
       light: "#FFFF",
+      dark: "#1E1E1E",
     },
     error: {
       light: "#ef233c",
@@ -12,7 +13,6 @@ const customTheme = createTheme({
     },
     grey: {
       "200": "#8d99ae",
-
       "100": "#edf2f4",
     },
   },

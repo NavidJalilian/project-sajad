@@ -1,6 +1,6 @@
 import { StylesType } from "../../theme/type";
 
-const styles: StylesType<"root"> = {
+const styles: StylesType<"root" | "features" | "images"> = {
   root: {
     label: "infoBox",
     display: "flex",
@@ -8,6 +8,82 @@ const styles: StylesType<"root"> = {
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: ({ palette }) => palette.primary.light,
+    margin: 2,
+  },
+  chooseUs: {
+    label: "chooseUs",
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "36px",
+    lineHeight: "120.5%",
+    letterSpacing: "0.031em",
+    color: ({ palette }) => palette.primary.dark,
+  },
+  mainTitle: {
+    label: "mainTitle",
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 700,
+    fontSize: "105px",
+    lineHeight: "120.5%",
+    letterSpacing: "0.033em",
+    color: ({ palette }) => palette.primary.dark,
+    ".underlineRed": {
+      borderBottom: ({ palette }) => `8px solid ${palette.error.main}`,
+      pb: "10px",
+      display: "inline-block",
+    },
+  },
+  images: {
+    label: "images",
+    display: "flex",
+    gap: 2,
+    mr: "149px",
+    mt: "38px",
+  },
+  description: {
+    label: "description",
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "24px",
+    lineHeight: "120.5%",
+    letterSpacing: "0.031em",
+    maxWidth: "1084px",
+    color: ({ palette }) => palette.primary.dark,
+    mt: "77px",
+  },
+  features: {
+    label: "features",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    mx: "149px",
+    maxWidth: "1084px",
+    my: "35px",
+  },
+  feature: {
+    label: "feature",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 3,
+    img: {
+      width: 48,
+      height: 48,
+    },
+    p: {
+      maxWidth: "264px",
+      fontFamily: "Outfit",
+      fontStyle: "normal",
+      fontWeight: 300,
+      fontSize: "20px",
+      lineHeight: "97%",
+      letterSpacing: "0.031em",
+      color: ({ palette }) => palette.primary.dark,
+    },
   },
 };
 

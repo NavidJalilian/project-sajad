@@ -2,6 +2,7 @@ import { Box, Tab, Tabs } from "@mui/material";
 import React from "react";
 import styles from "./Landing.style";
 import HeroImg from "../../assets/images/hero.png";
+import Info from "../../components/Info";
 
 export default function Landing() {
   const [value, setValue] = React.useState(0);
@@ -45,6 +46,7 @@ export default function Landing() {
       <Box>
         <img src={HeroImg} alt="hero img" />
       </Box>
+      <Info />
     </Box>
   );
 }
