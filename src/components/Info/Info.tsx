@@ -17,16 +17,19 @@ export default function Info() {
       <Typography variant="h1" sx={styles.mainTitle}>
         Why <span className="underlineRed">Jacob</span>?
       </Typography>
+
       <Box sx={styles.images}>
         <img src={InfoLeftImg} alt="Info Left Img" />
         <img src={InfoMiddleImg} alt="Info Middle Img" />
         <img src={InfoRightImg} alt="Info Right Img" />
       </Box>
+
       <Typography variant="body2" sx={styles.description}>
         Honour; Text even least, for were concept felt nonsense, hitting english
         time, and position. To the you feedback without. The project brown and
         by diagrams out
       </Typography>
+
       <Box sx={styles.features}>
         <Box sx={styles.feature}>
           <img src={apartmentIcon} alt="Apartment Icon" />
@@ -47,6 +50,7 @@ export default function Info() {
           </Typography>
         </Box>
       </Box>
+
       <Typography variant="h2" sx={styles.slogan}>
         Our job, <span className="textRed">your spotlight.</span>
       </Typography>
@@ -63,13 +67,14 @@ export default function Info() {
               variant="outlined"
               placeholder="Email Address..."
               sx={styles.emailInput}
+              fullWidth
             />
             <IconButton sx={styles.sendButton} disableRipple>
-              <img src={RightArrowIcon} width={22} height={20} />
+              <img src={RightArrowIcon} width={28} height={20} />
             </IconButton>
           </Box>
         </Box>
-        <img src={DeskImg} alt="Desk Img" />
+        <img src={DeskImg} alt="Desk Img" className="newsLetterImage" />
       </Box>
     </Box>
   );

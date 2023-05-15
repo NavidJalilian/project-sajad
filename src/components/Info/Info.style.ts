@@ -110,7 +110,7 @@ const styles: StylesType<"root" | "features" | "images"> = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    img: {
+    ".newsLetterImage": {
       width: "566px",
       height: "293px",
       borderRadius: "30px",
@@ -133,16 +133,23 @@ const styles: StylesType<"root" | "features" | "images"> = {
   inputGroup: {
     display: "flex",
     justifyContent: "center",
-    alignItems: "flex-end",
+    alignItems: "enter",
+    gap: 1,
+    mt: "28px",
   },
   emailInput: {
-    border: "1px solid #000000",
-    borderRadius: "20px",
-    maxWidth: "650px",
+    // "& .MuiInputBase-input": {
+    //   backgroundColor: ({ palette }) => palette.common.white,
+    //   maxWidth: "650px",
+    //   border: "1px solid #000000",
+    //   borderRadius: "20px",
+    // },
   },
   sendButton: {
     backgroundColor: ({ palette }) => palette.primary.main,
     lineHeight: 1,
+    width: "49px",
+    height: "49px",
   },
 };
 
