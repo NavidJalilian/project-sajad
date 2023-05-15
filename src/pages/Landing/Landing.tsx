@@ -1,7 +1,5 @@
-import { Box, Stepper, Tab, Tabs } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
 import React from "react";
-import Form from "../../components/Form";
-import Steps from "../../components/Steps";
 import styles from "./Landing.style";
 import HeroImg from "../../assets/images/hero.png";
 
