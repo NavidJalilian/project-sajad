@@ -10,6 +10,7 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
   container: {
     label: "servicesContainer",
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
@@ -45,6 +46,14 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     fontSize: "50px",
     lineHeight: "120.5%",
     letterSpacing: "0.033em",
+  
+    display: "flex",
+    mt: "112px",
+  },
+  bannerArrowBtn: {
+    position: "absolute",
+    bottom: "20px",
+    right: 0,
   },
 };
 

@@ -13,13 +13,13 @@ export default function Sales() {
   ]);
 
   return (
-    <Box className="container">
+    <Box sx={styles.root} className="container">
       <Stack direction="row" justifyContent="center" gap={1.5} p={1}>
         {Values.map((item) => (
           <Number {...{ value: item.value, label: item.title }} />
         ))}
       </Stack>
-      <Stack direction="row" alignItems="start" gap={8} mt={8}>
+      <Stack direction="row" alignItems="start" gap={8} mt={8} pb={10}>
         <Box
           sx={{
             width: 91,

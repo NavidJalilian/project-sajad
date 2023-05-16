@@ -5,8 +5,11 @@ import InfoRightImg from "../../assets/images/info-right.jpg";
 import InfoMiddleImg from "../../assets/images/info-middle.jpg";
 import InfoLeftImg from "../../assets/images/info-left.jpg";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
+import RightArrowRedIcon from "../../assets/images/rightArrowRed.svg";
+import BannerImg from "../../assets/images/banner.png";
 import Swiper from "../Swiper";
 import Indicator from "../Indicator/Indicator";
+import Banner from "../Banner";
 
 const images = [
   [
@@ -24,8 +27,21 @@ const images = [
 export default function Services() {
   return (
     <Box sx={styles.root}>
-      <Box sx={styles.container} className="container">
-        <Box>
+      <Box sx={styles.container}>
+        <Typography variant="h2" sx={styles.slogan} className="container">
+          Our job, <span className="textRed">your spotlight.</span>
+        </Typography>
+
+        <Box mt={2} position="relative" width="100%">
+          <Box src={BannerImg} height={300} component="img" />
+          <Button sx={styles.bannerArrowBtn} variant="text">
+            <img src={RightArrowRedIcon} width={39} height={36} />
+          </Button>
+        </Box>
+
+        <Banner />
+
+        <Box sx={styles.content} className="container">
           <Swiper size={images.length} width={500} height={860}>
             <Stack direction="row" width={500}>
               {images.map((row) => (

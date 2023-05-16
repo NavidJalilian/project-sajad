@@ -70,7 +70,6 @@ export default function Footer() {
           ))}
         </Stack>
       </Stack>
-      <Typography sx={styles.description}>mail@jacob.com</Typography>
     </Box>
   );
 }
