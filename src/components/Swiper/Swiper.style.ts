@@ -5,6 +5,7 @@ const styles: StylesType<"swiperContainer" | "swiperContent"> = {
     position: "relative",
     // Adjust the height as needed
     touchAction: "pan-y",
+    margin: "auto",
     "&:hover": {
       cursor: "grab",
     },
