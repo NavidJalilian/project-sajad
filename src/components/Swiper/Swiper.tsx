@@ -8,7 +8,7 @@ const Swiper = ({ children, size, width }) => {
   const [Index, setIndex] = useState(0);
 
   return (
-    <Grid container justify="center">
+    <Grid container>
       <Grid item xs={10} sx={styles.swiperContainer}>
         <Box sx={styles.swiperContent}>
           <Box
@@ -24,7 +24,7 @@ const Swiper = ({ children, size, width }) => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={10} container justify="center">
+      <Grid item xs={10}>
         <Button onClick={() => Index > 0 && setIndex((i) => i - 1)}>
           Previous
         </Button>
