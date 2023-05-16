@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./Landing.style";
 import HeroImg from "../../assets/images/hero.png";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
-import Info from "../../components/Info";
 
 export default function Landing() {
   const [value, setValue] = React.useState(0);
@@ -78,7 +77,6 @@ export default function Landing() {
           </Stack>
         </Button>
       </Stack>
-      <Info />
     </Box>
   );
 }
