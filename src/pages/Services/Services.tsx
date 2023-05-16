@@ -64,7 +64,12 @@ export default function Services() {
               }}
             />
 
-            <Swiper size={images.length} width={500} {...{ Index, setIndex }}>
+            <Swiper
+              size={images.length}
+              width={500}
+              {...{ Index, setIndex }}
+              showIndicator
+            >
               <Stack direction="row">
                 {images.map((row) => (
                   <Box sx={styles.slides}>

@@ -19,8 +19,8 @@ export default function Info() {
         </Typography>
 
         <Box sx={styles.images}>
-          <Swiper size={6} width={"1400"}>
-            <Stack direction="row">
+          <Swiper size={6}>
+            <Stack direction="row" gap={1.5}>
               <img src={InfoLeftImg} alt="Info Left Img" />
               <img src={InfoMiddleImg} alt="Info Middle Img" />
               <img src={InfoRightImg} alt="Info Right Img" />
