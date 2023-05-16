@@ -6,38 +6,81 @@ import Girl2Img from "../../assets/images/girl2.jpg";
 import Boy1Img from "../../assets/images/boy1.jpg";
 import Boy2Img from "../../assets/images/boy2.jpg";
 import CaseRow from "./CaseRow";
+import Swiper from "../../components/Swiper";
+import Indicator from "../../components/Indicator/Indicator";
 
 const data = [
-  {
-    type: 1,
-    labels: ["Our", "case", "Studies"],
-    descriptions: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-    images: [Girl1Img],
-  },
-  {
-    type: 2,
-    labels: [],
-    descriptions: [
-      "Lorem ipsum",
-      "dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    ],
-    images: [Girl2Img],
-  },
-  {
-    type: 3,
-    labels: ["The best consultant we’ve ever had"],
-    descriptions: ["-Revenson’s Group"],
-    images: [Boy1Img, Boy2Img],
-  },
+  [
+    {
+      type: 1,
+      labels: ["Our", "case", "Studies"],
+      descriptions: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      ],
+      images: [Girl1Img],
+    },
+    {
+      type: 2,
+      labels: [],
+      descriptions: [
+        "Lorem ipsum",
+        "dolor sit amet, consectetur adipiscing elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      ],
+      images: [Girl2Img],
+    },
+    {
+      type: 3,
+      labels: ["The best consultant we’ve ever had"],
+      descriptions: ["-Revenson’s Group"],
+      images: [Boy1Img, Boy2Img],
+    },
+  ],
+  [
+    {
+      type: 1,
+      labels: ["Our", "case", "Studies"],
+      descriptions: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      ],
+      images: [Girl1Img],
+    },
+    {
+      type: 2,
+      labels: [],
+      descriptions: [
+        "Lorem ipsum",
+        "dolor sit amet, consectetur adipiscing elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      ],
+      images: [Girl2Img],
+    },
+    {
+      type: 3,
+      labels: ["The best consultant we’ve ever had"],
+      descriptions: ["-Revenson’s Group"],
+      images: [Boy1Img, Boy2Img],
+    },
+  ],
 ];
 
 export default function Cases() {
   return (
     <Box className="container">
-      <Grid container sx={styles.grid} spacing={5}>
-        {data.map((item) => CaseRow({ ...item }))}
-      </Grid>
+      <Swiper size={data.length} width={1030}>
+        <Stack direction="row">
+          {data.map((row, rowIndex) => (
+            <Box key={rowIndex}>
+              <Grid container sx={styles.grid} spacing={5} width={1030}>
+                {row.map((item, idx) => (
+                  <CaseRow key={idx} {...item} />
+                ))}
+              </Grid>
+            </Box>
+          ))}
+        </Stack>
+      </Swiper>
+      <Indicator value={2} />
     </Box>
   );
 }
