@@ -14,8 +14,12 @@ const styles: StylesType<"root" | "slides" | "content"> = {
   slides: {
     label: "images",
     display: "flex",
+    overflow: "hidden",
+    width: 500,
     flexDirection: "column",
     gap: 2,
+    flexGrow: 1,
+    flexShrink: 0,
   },
   content: {},
 };

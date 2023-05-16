@@ -16,16 +16,37 @@ import copyIcon from "../../assets/images/copy.svg";
 import movieIcon from "../../assets/images/movie.svg";
 import DeskImg from "../../assets/images/desk.png";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
+import Swiper from "../Swiper";
+
+const images = [
+  [InfoLeftImg, InfoMiddleImg, InfoRightImg],
+  [InfoLeftImg, InfoMiddleImg, InfoRightImg],
+];
 
 export default function Services() {
   return (
     <Box sx={styles.root}>
       <Box sx={styles.container} className="container">
-        <Box sx={styles.slides}>
-          <img src={InfoLeftImg} alt="Info Left Img" />
-          <img src={InfoMiddleImg} alt="Info Middle Img" />
-          <img src={InfoRightImg} alt="Info Right Img" />
-        </Box>
+        <Swiper size={images.length} width={500} height={860}>
+          <Stack direction="row" width={500}>
+            {images.map((row) => (
+              <Box sx={styles.slides}>
+                {row.map((image) => (
+                  <Box
+                    component="img"
+                    sx={{ flexGrow: 1, flexShrink: 0 }}
+                    src={image}
+                    alt="Info Left Img"
+                    key={image}
+                    width={500}
+                    height={286}
+                  />
+                ))}
+              </Box>
+            ))}
+          </Stack>
+        </Swiper>
+        <Box sx={styles.slides}></Box>
 
         <Box sx={styles.content}>
           <Typography variant="h1" sx={styles.mainTitle}>
