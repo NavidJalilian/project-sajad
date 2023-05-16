@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import styles from "./Info.style";
 import InfoRightImg from "../../assets/images/info-right.jpg";
@@ -7,6 +7,7 @@ import InfoLeftImg from "../../assets/images/info-left.jpg";
 import apartmentIcon from "../../assets/images/apartment.svg";
 import copyIcon from "../../assets/images/copy.svg";
 import movieIcon from "../../assets/images/movie.svg";
+import Swiper from "../Swiper";
 
 export default function Info() {
   return (
@@ -18,9 +19,16 @@ export default function Info() {
         </Typography>
 
         <Box sx={styles.images}>
-          <img src={InfoLeftImg} alt="Info Left Img" />
-          <img src={InfoMiddleImg} alt="Info Middle Img" />
-          <img src={InfoRightImg} alt="Info Right Img" />
+          <Swiper size={6} width={"1400"}>
+            <Stack direction="row">
+              <img src={InfoLeftImg} alt="Info Left Img" />
+              <img src={InfoMiddleImg} alt="Info Middle Img" />
+              <img src={InfoRightImg} alt="Info Right Img" />
+              <img src={InfoLeftImg} alt="Info Left Img" />
+              <img src={InfoMiddleImg} alt="Info Middle Img" />
+              <img src={InfoRightImg} alt="Info Right Img" />
+            </Stack>
+          </Swiper>
         </Box>
 
         <Typography variant="body2" sx={styles.description}>

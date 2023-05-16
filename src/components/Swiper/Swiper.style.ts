@@ -2,8 +2,6 @@ import { StylesType } from "../../theme/type";
 
 const styles: StylesType<"swiperContainer" | "swiperContent"> = {
   swiperContainer: {
-    width: "500px",
-    height: "860px",
     position: "relative",
     // Adjust the height as needed
     touchAction: "pan-y",
