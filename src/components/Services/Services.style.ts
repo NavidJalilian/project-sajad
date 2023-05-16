@@ -43,6 +43,11 @@ const styles: StylesType<"root" | "slides" | "content"> = {
     display: "flex",
     mt: "112px",
   },
+  bannerArrowBtn: {
+    position: "absolute",
+    bottom: "20px",
+    right: 0,
+  },
 };
 
 export default styles;

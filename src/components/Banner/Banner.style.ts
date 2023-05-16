@@ -8,8 +8,9 @@ const styles: StylesType<"root" | "title"> = {
     alignItems: "center",
     backgroundColor: ({ palette }) => palette.primary.dark,
     color: ({ palette }) => palette.primary.light,
-    mt: 2,
+    mt: "58px",
     position: "relative",
+    width: "100%",
   },
   title: {
     maxWidth: 747,

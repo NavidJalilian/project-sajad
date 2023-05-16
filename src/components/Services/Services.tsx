@@ -5,6 +5,8 @@ import InfoRightImg from "../../assets/images/info-right.jpg";
 import InfoMiddleImg from "../../assets/images/info-middle.jpg";
 import InfoLeftImg from "../../assets/images/info-left.jpg";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
+import RightArrowRedIcon from "../../assets/images/rightArrowRed.svg";
+import BannerImg from "../../assets/images/banner.png";
 import Swiper from "../Swiper";
 import Banner from "../Banner";
 
@@ -20,6 +22,13 @@ export default function Services() {
         <Typography variant="h2" sx={styles.slogan} className="container">
           Our job, <span className="textRed">your spotlight.</span>
         </Typography>
+
+        <Box mt={2} position="relative" width="100%">
+          <Box src={BannerImg} height={300} component="img" />
+          <Button sx={styles.bannerArrowBtn} variant="text">
+            <img src={RightArrowRedIcon} width={39} height={36} />
+          </Button>
+        </Box>
 
         <Banner />
 
