@@ -72,7 +72,8 @@ export default function Services() {
                           left: 0,
                           color: ({ palette }) => palette.primary.light,
                           display: "flex",
-                          justifyContent: "space-between",
+                          gap: 2,
+                          mx: 2,
                           width: "100%",
                         }}
                       >
