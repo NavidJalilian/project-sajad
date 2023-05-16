@@ -1,6 +1,6 @@
 import { StylesType } from "../../theme/type";
 
-const styles: StylesType<"root" | "slides" | "content"> = {
+const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
   root: {
     label: "services",
     backgroundColor: ({ palette }) => palette.grey["100"],
@@ -34,11 +34,18 @@ const styles: StylesType<"root" | "slides" | "content"> = {
     overflow: "hidden",
     width: 500,
     flexDirection: "column",
-    gap: 2,
+    gap: 1,
     flexGrow: 1,
     flexShrink: 0,
   },
-  content: {},
+  imgLabel: {
+    fontFamily: "'Outfit', sans-serif",
+    fontStyle: "normal",
+    fontWeight: 300,
+    fontSize: "50px",
+    lineHeight: "120.5%",
+    letterSpacing: "0.033em",
+  },
 };
 
 export default styles;

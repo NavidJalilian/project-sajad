@@ -6,10 +6,19 @@ import InfoMiddleImg from "../../assets/images/info-middle.jpg";
 import InfoLeftImg from "../../assets/images/info-left.jpg";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
 import Swiper from "../Swiper";
+import Indicator from "../Indicator/Indicator";
 
 const images = [
-  [InfoLeftImg, InfoMiddleImg, InfoRightImg],
-  [InfoLeftImg, InfoMiddleImg, InfoRightImg],
+  [
+    { url: InfoLeftImg, label: "Commercials" },
+    { url: InfoMiddleImg, label: "Consulting" },
+    { url: InfoRightImg, label: "Company" },
+  ],
+  [
+    { url: InfoLeftImg, label: "Personnel" },
+    { url: InfoMiddleImg, label: "Services" },
+    { url: InfoRightImg, label: "Organization" },
+  ],
 ];
 
 export default function Services() {
@@ -21,47 +30,77 @@ export default function Services() {
             <Stack direction="row" width={500}>
               {images.map((row) => (
                 <Box sx={styles.slides}>
-                  {row.map((image) => (
+                  {row.map((image, idx) => (
                     <Box
-                      component="img"
-                      sx={{ flexGrow: 1, flexShrink: 0 }}
-                      src={image}
-                      alt="Info Left Img"
-                      key={image}
-                      width={500}
-                      height={286}
-                    />
+                      sx={{
+                        position: "relative",
+                      }}
+                    >
+                      <Box
+                        component="img"
+                        sx={{
+                          flexGrow: 1,
+                          flexShrink: 0,
+                        }}
+                        src={image.url}
+                        alt={image.label}
+                        key={image.url}
+                        width={500}
+                        height={286}
+                      />
+                      {/* {idx > 0 && ( */}
+                      <Box
+                        sx={{
+                          position: "absolute",
+                          bottom: 20,
+                          left: 0,
+                          color: ({ palette }) => palette.primary.light,
+                          display: "flex",
+                          justifyContent: "space-between",
+                          width: "100%",
+                        }}
+                      >
+                        <Typography sx={styles.imgLabel}>
+                          {String(idx).length < 2 ? "0" + idx : idx}
+                        </Typography>
+                        <Typography sx={styles.imgLabel}>
+                          {image.label}
+                        </Typography>
+                      </Box>
+                      {/* )} */}
+                    </Box>
                   ))}
                 </Box>
               ))}
             </Stack>
           </Swiper>
-        </Box>{" "}
-          <Box sx={styles.content} className="container">
-            <Typography variant="h1" sx={styles.mainTitle}>
-              Our
-            </Typography>
-            <Typography variant="h1" sx={styles.mainTitle} className="redText">
-              Services
-            </Typography>
-            <Typography variant="body2" sx={styles.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </Typography>
-            <Button sx={styles.button} variant="contained">
-              <Stack
-                direction="row"
-                justifyContent="space-around"
-                width="100%"
-                alignItems="center"
-                py={0.5}
-              >
-                <Typography>Explore More</Typography>
-                <Box>
-                  <img src={RightArrowIcon} width={22} height={20} />
-                </Box>
-              </Stack>
-            </Button>
-          </Box>
+          <Indicator value={2} />
+        </Box>
+        <Box sx={styles.content} className="container">
+          <Typography variant="h1" sx={styles.mainTitle}>
+            Our
+          </Typography>
+          <Typography variant="h1" sx={styles.mainTitle} className="redText">
+            Services
+          </Typography>
+          <Typography variant="body2" sx={styles.text}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Typography>
+          <Button sx={styles.button} variant="contained">
+            <Stack
+              direction="row"
+              justifyContent="space-around"
+              width="100%"
+              alignItems="center"
+              py={0.5}
+            >
+              <Typography>Explore More</Typography>
+              <Box>
+                <img src={RightArrowIcon} width={22} height={20} />
+              </Box>
+            </Stack>
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

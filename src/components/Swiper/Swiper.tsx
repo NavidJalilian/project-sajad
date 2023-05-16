@@ -1,13 +1,11 @@
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Stack, Tab, Tabs, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
 import LapTop from "../../assets/images/laptop.jpg";
-import RightArrowIcon from "../../assets/images/rightArrow.svg";
+import Arrow from "../../assets/images/arrow.svg";
 import styles from "./Swiper.style";
 
 const Swiper = ({ children, size, width, height }) => {
   const [Index, setIndex] = useState(0);
-
-  console.log(children);
 
   return (
     <Grid container justify="center">
@@ -30,7 +28,9 @@ const Swiper = ({ children, size, width, height }) => {
         <Button onClick={() => Index > 0 && setIndex((i) => i - 1)}>
           Previous
         </Button>
-        <Button onClick={() => setIndex((i) => i + 1)}>Next</Button>
+        <Button onClick={() => setIndex((i) => i + 1)}>
+          <Box component="img" src={Arrow} />
+        </Button>
       </Grid>
     </Grid>
   );
