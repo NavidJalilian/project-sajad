@@ -18,7 +18,7 @@ export default function NewsLetter() {
             placeholder="Email Address..."
             sx={styles.emailInput}
           />
-          <IconButton sx={styles.sendButton} disableRipple>
+          <IconButton sx={styles.sendButton}>
             <img src={RightArrowIcon} width={28} height={20} />
           </IconButton>
         </Box>

@@ -1,6 +1,5 @@
 import { Box, Link, Stack, Typography } from "@mui/material";
 import React from "react";
-import Banner from "../../components/Banner";
 import JacobTitle from "../../assets/images/jacob.png";
 import styles from "./footer.style";
 
@@ -15,7 +14,6 @@ export default function Footer() {
     event.preventDefault();
   return (
     <Box>
-      <Banner />
       <Stack
         component="footer"
         sx={styles.root}

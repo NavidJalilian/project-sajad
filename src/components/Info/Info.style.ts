@@ -93,20 +93,6 @@ const styles: StylesType<"root" | "features" | "images"> = {
       color: ({ palette }) => palette.primary.dark,
     },
   },
-  slogan: {
-    label: "slogan",
-    fontFamily: "Outfit",
-    fontStyle: "normal",
-    fontWeight: 700,
-    fontSize: "70px",
-    lineHeight: "120.5%",
-    letterSpacing: "0.033em",
-    color: ({ palette }) => palette.primary.dark,
-    mt: "82px",
-    ".textRed": {
-      color: ({ palette }) => palette.error.main,
-    },
-  },
 };
 
 export default styles;

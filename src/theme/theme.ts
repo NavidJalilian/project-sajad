@@ -16,6 +16,9 @@ const customTheme = createTheme({
       "200": "#8d99ae",
       "100": "#edf2f4",
     },
+    common: {
+      black: "#000000",
+    },
   },
   typography: {
     fontFamily: "Outfit, sans-serif",

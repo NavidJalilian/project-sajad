@@ -2,7 +2,7 @@ import { StylesType } from "../../theme/type";
 
 const styles: StylesType<"root" | "title"> = {
   root: {
-    label: "infoBox",
+    label: "BannerBox",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
