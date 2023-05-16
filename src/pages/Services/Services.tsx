@@ -16,11 +16,11 @@ import RightArrowRedIcon from "../../assets/images/rightArrowRed.svg";
 
 import BannerImg from "../../assets/images/banner.png";
 
-import Swiper from "../Swiper";
+import Swiper from "../../components/Swiper";
 
-import Indicator from "../Indicator/Indicator";
+import Indicator from "../../components/Indicator/Indicator";
 
-import Banner from "../Banner";
+import Banner from "../../components/Banner";
 
 const images = [
   [

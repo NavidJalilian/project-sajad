@@ -1,6 +1,6 @@
 import Info from "./components/Info";
 import NewsLetter from "./components/NewsLetter";
-import Services from "./components/Services";
+import Services from "./pages/Services";
 import Cases from "./pages/Cases";
 import Landing from "./pages/Landing";
 import Sales from "./pages/Sales";
