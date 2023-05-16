@@ -1,42 +1,31 @@
 import React from "react";
-
 import { Box, Button, Stack, Typography } from "@mui/material";
-
 import styles from "./Services.style";
-
 import InfoRightImg from "../../assets/images/info-right.jpg";
-
 import InfoMiddleImg from "../../assets/images/info-middle.jpg";
-
 import InfoLeftImg from "../../assets/images/info-left.jpg";
-
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
-
 import RightArrowRedIcon from "../../assets/images/rightArrowRed.svg";
-
 import BannerImg from "../../assets/images/banner.png";
-
 import Swiper from "../../components/Swiper";
-
 import Indicator from "../../components/Indicator/Indicator";
-
 import Banner from "../../components/Banner";
 
 const images = [
   [
-    { url: InfoLeftImg, label: "Commercials" },
+    { url: InfoLeftImg, label: "Commercials", id: 1 },
 
-    { url: InfoMiddleImg, label: "Consulting" },
+    { url: InfoMiddleImg, label: "Consulting", id: 2 },
 
-    { url: InfoRightImg, label: "Company" },
+    { url: InfoRightImg, label: "Company", id: 3 },
   ],
 
   [
-    { url: InfoLeftImg, label: "Personnel" },
+    { url: InfoLeftImg, label: "Personnel", id: 4 },
 
-    { url: InfoMiddleImg, label: "Services" },
+    { url: InfoMiddleImg, label: "Services", id: 5 },
 
-    { url: InfoRightImg, label: "Organization" },
+    { url: InfoRightImg, label: "Organization", id: 6 },
   ],
 ];
 
@@ -60,8 +49,8 @@ export default function Services() {
 
         <Box sx={styles.content} className="container">
           <Box>
-            <Swiper size={images.length} width={500} height={860}>
-              <Stack direction="row" width={500}>
+            <Swiper size={images.length} width={500}>
+              <Stack direction="row">
                 {images.map((row) => (
                   <Box sx={styles.slides}>
                     {row.map((image, idx) => (
@@ -74,14 +63,13 @@ export default function Services() {
                           component="img"
                           sx={{
                             flexGrow: 1,
-
+                            borderRadius: 4,
                             flexShrink: 0,
                           }}
                           src={image.url}
                           alt={image.label}
                           key={image.url}
                           width={500}
-                          height={286}
                         />
 
                         {/* {idx > 0 && ( */}
@@ -97,17 +85,17 @@ export default function Services() {
                             color: ({ palette }) => palette.primary.light,
 
                             display: "flex",
-
-                            justifyContent: "space-between",
-
+                            gap: 2,
                             width: "100%",
                           }}
                         >
-                          <Typography sx={styles.imgLabel}>
-                            {String(idx).length < 2 ? "0" + idx : idx}
+                          <Typography sx={styles.imgLabel} mx={1}>
+                            {String(image.id).length < 2
+                              ? "0" + image.id
+                              : image.id}
                           </Typography>
 
-                          <Typography sx={styles.imgLabel}>
+                          <Typography sx={styles.imgLabel} mx={1}>
                             {image.label}
                           </Typography>
                         </Box>

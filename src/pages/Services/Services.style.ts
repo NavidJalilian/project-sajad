@@ -54,8 +54,6 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
 
     overflow: "hidden",
 
-    width: 500,
-
     flexDirection: "column",
 
     gap: 1,

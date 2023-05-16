@@ -4,7 +4,7 @@ import LapTop from "../../assets/images/laptop.jpg";
 import Arrow from "../../assets/images/arrow.svg";
 import styles from "./Swiper.style";
 
-const Swiper = ({ children, size, width, height }) => {
+const Swiper = ({ children, size, width }) => {
   const [Index, setIndex] = useState(0);
 
   return (
@@ -15,7 +15,7 @@ const Swiper = ({ children, size, width, height }) => {
             style={{
               flexGrow: 1,
               transition: "transform 0.3s ease-in-out",
-              height,
+
               width,
               transform: `translateX(-${Index * 100}%)`,
             }}
