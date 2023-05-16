@@ -2,7 +2,6 @@ import { StylesType } from "../../theme/type";
 
 const styles: StylesType<"swiperContainer" | "swiperContent"> = {
   swiperContainer: {
-    overflow: "hidden",
     width: "500px",
     height: "860px",
     position: "relative",
@@ -14,6 +13,7 @@ const styles: StylesType<"swiperContainer" | "swiperContent"> = {
   },
   swiperContent: {
     display: "flex",
+    overflow: "hidden",
     width: "fit-content",
     transition: "transform 0.3s ease-in-out",
   },

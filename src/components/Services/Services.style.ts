@@ -5,11 +5,11 @@ const styles: StylesType<"root" | "slides" | "content"> = {
     label: "services",
     backgroundColor: ({ palette }) => palette.grey["100"],
     mt: "50px",
+    display: "flex",
   },
   container: {
     label: "servicesContainer",
     display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
