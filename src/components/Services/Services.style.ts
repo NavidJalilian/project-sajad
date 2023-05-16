@@ -10,6 +10,7 @@ const styles: StylesType<"root" | "slides" | "content"> = {
   container: {
     label: "servicesContainer",
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
@@ -38,7 +39,10 @@ const styles: StylesType<"root" | "slides" | "content"> = {
     flexGrow: 1,
     flexShrink: 0,
   },
-  content: {},
+  content: {
+    display: "flex",
+    mt: "112px",
+  },
 };
 
 export default styles;

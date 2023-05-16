@@ -6,6 +6,7 @@ import InfoMiddleImg from "../../assets/images/info-middle.jpg";
 import InfoLeftImg from "../../assets/images/info-left.jpg";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
 import Swiper from "../Swiper";
+import Banner from "../Banner";
 
 const images = [
   [InfoLeftImg, InfoMiddleImg, InfoRightImg],
@@ -15,8 +16,14 @@ const images = [
 export default function Services() {
   return (
     <Box sx={styles.root}>
-      <Box sx={styles.container} className="container">
-        <Box>
+      <Box sx={styles.container}>
+        <Typography variant="h2" sx={styles.slogan} className="container">
+          Our job, <span className="textRed">your spotlight.</span>
+        </Typography>
+
+        <Banner />
+
+        <Box sx={styles.content} className="container">
           <Swiper size={images.length} width={500} height={860}>
             <Stack direction="row" width={500}>
               {images.map((row) => (
@@ -36,8 +43,8 @@ export default function Services() {
               ))}
             </Stack>
           </Swiper>
-        </Box>{" "}
-          <Box sx={styles.content} className="container">
+
+          <Box>
             <Typography variant="h1" sx={styles.mainTitle}>
               Our
             </Typography>
@@ -62,6 +69,7 @@ export default function Services() {
               </Stack>
             </Button>
           </Box>
+        </Box>
       </Box>
     </Box>
   );
