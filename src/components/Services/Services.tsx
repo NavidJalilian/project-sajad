@@ -111,11 +111,7 @@ export default function Services() {
               alignItems="center"
               py={0.5}
             >
-              <Typography>Explore More</Typography>
-              <Box>
-                <img src={RightArrowIcon} width={22} height={20} />
-              </Box>
-            </Stack>
+          
           </Button>
         </Box>
       </Box>
