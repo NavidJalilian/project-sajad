@@ -7,7 +7,6 @@ import Boy1Img from "../../assets/images/boy1.jpg";
 import Boy2Img from "../../assets/images/boy2.jpg";
 import CaseRow from "./CaseRow";
 import Swiper from "../../components/Swiper";
-import Indicator from "../../components/Indicator/Indicator";
 
 const data = [
   [
@@ -67,20 +66,17 @@ const data = [
 export default function Cases() {
   return (
     <Box className="container">
-      <Swiper size={data.length} width={1030}>
+      <Swiper size={data.length} showIndicator={true} width={1030}>
         <Stack direction="row">
           {data.map((row, rowIndex) => (
-            <Box key={rowIndex}>
-              <Grid container sx={styles.grid} spacing={5} width={1030}>
-                {row.map((item, idx) => (
-                  <CaseRow key={idx} {...item} />
-                ))}
-              </Grid>
+            <Box key={rowIndex} sx={styles.grid} width={1030}>
+              {row.map((item, idx) => (
+                <CaseRow key={idx} {...item} />
+              ))}
             </Box>
           ))}
         </Stack>
       </Swiper>
-      <Indicator value={2} />
     </Box>
   );
 }

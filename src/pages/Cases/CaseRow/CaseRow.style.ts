@@ -1,6 +1,11 @@
 import { StylesType } from "../../../theme/type";
 
 const styles: StylesType<"label"> = {
+  root: {
+    display: "flex",
+    justifyContent: "space-between",
+    gap: 2,
+  },
   label: {
     color: ({ palette }) => palette.error.main,
     fontFamily: "Outfit",
