@@ -3,10 +3,23 @@ import React, { useRef, useState } from "react";
 import LapTop from "../../assets/images/laptop.jpg";
 import Arrow from "../../assets/images/arrow.svg";
 import styles from "./Swiper.style";
+import Indicator from "../Indicator/Indicator";
 
 const Swiper = ({ children, size, width }) => {
   const [Index, setIndex] = useState(0);
+  const maxIndex = size - 1;
 
+  const handlePrevClick = () => {
+    if (Index > 0) {
+      setIndex((prevIndex) => prevIndex - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (Index < maxIndex) {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
+  };
   return (
     <Grid container>
       <Grid item xs={10} sx={styles.swiperContainer}>
@@ -25,12 +38,16 @@ const Swiper = ({ children, size, width }) => {
         </Box>
       </Grid>
       <Grid item xs={10}>
-        <Button onClick={() => Index > 0 && setIndex((i) => i - 1)}>
-          Previous
-        </Button>
-        <Button onClick={() => setIndex((i) => i + 1)}>
-          <Box component="img" src={Arrow} />
-        </Button>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-around"
+        >
+          <Indicator {...{ Index, setIndex }} />
+          <Button onClick={handleNextClick} disabled={Index === maxIndex}>
+            <Box sx={{}} component="img" src={Arrow} />
+          </Button>
+        </Stack>  
       </Grid>
     </Grid>
   );

@@ -1,21 +1,20 @@
 import { Box, ButtonBase, Stack } from "@mui/material";
 import React, { useState } from "react";
 
-export default function Indicator({}) {
+export default function Indicator({ Index, setIndex }) {
   const width = 100;
   const height = 12;
-  const states = [1, 2, 3];
-  const [Value, setValue] = useState(2);
-  
+  const states = [0, 1];
+
   return (
     <Stack direction="row" width={100}>
       {states.map((item, idx) => (
         <ButtonBase
-          onClick={() => setValue(item)}
+          onClick={() => setIndex(item)}
           key={idx}
           sx={{
             background:
-              item === Value
+              item === Index
                 ? ({ palette }) => palette.error.light
                 : ({ palette }) => palette.grey[200],
             width: (width / states.length) * 100 + "%",
