@@ -5,7 +5,6 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     label: "services",
     backgroundColor: ({ palette }) => palette.grey["100"],
     mt: "50px",
-    display: "flex",
   },
   container: {
     label: "servicesContainer",
@@ -46,10 +45,15 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     fontSize: "50px",
     lineHeight: "120.5%",
     letterSpacing: "0.033em",
-  
+
     display: "flex",
     mt: "112px",
   },
+  content: {
+    display: "flex",
+    mt: "112px",
+  },
+
   bannerArrowBtn: {
     position: "absolute",
     bottom: "20px",
