@@ -1,7 +1,9 @@
 import { StylesType } from "../../theme/type";
 
 const styles: StylesType<"root" | "title" | "label"> = {
-  root: {},
+  root: {
+    mt: "146px",
+  },
   title: {
     lineHeight: 1,
     fontSize: 100,
