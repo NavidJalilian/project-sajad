@@ -8,12 +8,20 @@ const styles: StylesType<"root" | "content"> = {
     },
   },
   tab: {
-    color: ({ palette }) => palette.primary.light,
+    color: ({ palette }) => palette.primary.dark,
     "&.Mui-selected": {
       color: ({ palette }) => palette.error.light,
     },
-    fontFamily: "Outfit",
     textTransform: "lowercase",
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 24.5502,
+    lineHeight: "120.5%",
+    display: "flex",
+    alignItems: "center",
+    textAlign: "center",
+    letterSpacing: "0.033em",
   },
   content: {
     // width: "fit-content",

@@ -1,7 +1,7 @@
 import { Box, Button, Stack, Tab, Tabs, Typography } from "@mui/material";
 import React from "react";
 import styles from "./Landing.style";
-import HeroImg from "../../assets/images/hero.png";
+import HeroImg from "../../assets/images/hero.jpg";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
 
 export default function Landing() {
@@ -24,12 +24,10 @@ export default function Landing() {
           position: "absolute",
           inset: 0,
           zIndex: 1,
-          marginInlineStart: 2.75,
-          marginBlockStart: 1.5,
+          m: 1,
         }}
       >
         <Tabs
-          centered
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
@@ -42,7 +40,7 @@ export default function Landing() {
       </Box>
 
       <Box>
-        <img src={HeroImg} alt="hero img" />
+        <Box component="img" src={HeroImg} alt="hero img" />
       </Box>
       <Stack
         direction="column"
