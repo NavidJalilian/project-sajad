@@ -3,12 +3,15 @@ import { StylesType } from "../../theme/type";
 const styles: StylesType<"root" | "features" | "images"> = {
   root: {
     label: "infoBox",
+    backgroundColor: ({ palette }) => palette.primary.light,
+    margin: 2,
+  },
+  container: {
+    label: "infoBoxContainer",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: ({ palette }) => palette.primary.light,
-    margin: 2,
   },
   chooseUs: {
     label: "chooseUs",
@@ -38,9 +41,14 @@ const styles: StylesType<"root" | "features" | "images"> = {
   images: {
     label: "images",
     display: "flex",
+    justifyContent: "center",
     gap: 2,
-    mr: "149px",
     mt: "38px",
+    overflow: "hidden",
+    img: {
+      flex: "1 1 calc(33.3333% - 16px)",
+      borderRadius: "10px",
+    },
   },
   description: {
     label: "description",
@@ -98,58 +106,6 @@ const styles: StylesType<"root" | "features" | "images"> = {
     ".textRed": {
       color: ({ palette }) => palette.error.main,
     },
-  },
-  newsLetter: {
-    label: "newsLetter",
-    boxShadow: "-1px 1px 9px rgba(0, 0, 0, 0.25)",
-    borderRadius: "30px",
-    mx: "20px",
-    width: "90%",
-    pl: "42px",
-    mt: "86px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    ".newsLetterImage": {
-      width: "566px",
-      height: "293px",
-      borderRadius: "30px",
-    },
-  },
-  newsLetterText: {
-    label: "newsLetterText",
-    fontFamily: "Outfit",
-    fontStyle: "normal",
-    fontWeight: 400,
-    fontSize: "45.7709px",
-    lineHeight: "108%",
-    letterSpacing: "-0.027em",
-    maxWidth: "616px",
-    color: ({ palette }) => palette.primary.dark,
-    ".textRed": {
-      color: ({ palette }) => palette.error.main,
-    },
-  },
-  inputGroup: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "enter",
-    gap: 1,
-    mt: "28px",
-  },
-  emailInput: {
-    // "& .MuiInputBase-input": {
-    //   backgroundColor: ({ palette }) => palette.common.white,
-    //   maxWidth: "650px",
-    //   border: "1px solid #000000",
-    //   borderRadius: "20px",
-    // },
-  },
-  sendButton: {
-    backgroundColor: ({ palette }) => palette.primary.main,
-    lineHeight: 1,
-    width: "49px",
-    height: "49px",
   },
 };
 
