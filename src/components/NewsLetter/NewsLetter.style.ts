@@ -7,7 +7,6 @@ const styles: StylesType<"root"> = {
     boxShadow: "-1px 1px 9px rgba(0, 0, 0, 0.25)",
     borderRadius: "30px",
     mx: "20px",
-    width: "90%",
     height: "296px",
     pl: "42px",
     mt: "86px",
