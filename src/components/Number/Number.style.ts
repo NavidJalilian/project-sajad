@@ -7,6 +7,7 @@ const styles: StylesType<"root" | "title"> = {
     borderRadius: 4,
     px: 6,
     width: 400,
+    py: 1,
   },
   title: {
     fontSize: "5.1rem",

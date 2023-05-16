@@ -3,6 +3,7 @@ import { createTheme, PaletteColorOptions } from "@mui/material/styles";
 const customTheme = createTheme({
   palette: {
     primary: {
+      "900": "#1B1B1B",
       main: "#333333",
       light: "#FFFF",
       dark: "#1E1E1E",
