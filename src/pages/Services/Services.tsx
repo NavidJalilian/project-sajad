@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import styles from "./Services.style";
 import InfoRightImg from "../../assets/images/info-right.jpg";
@@ -10,6 +10,8 @@ import BannerImg from "../../assets/images/banner.png";
 import Swiper from "../../components/Swiper";
 import Indicator from "../../components/Indicator/Indicator";
 import Banner from "../../components/Banner";
+import Rate from "../../assets/images/rate.svg";
+import Camera from "../../assets/images/camera.svg";
 
 const images = [
   [
@@ -30,6 +32,8 @@ const images = [
 ];
 
 export default function Services() {
+  const [Index, setIndex] = useState(0);
+
   return (
     <Box sx={styles.root}>
       <Box sx={styles.container}>
@@ -46,10 +50,21 @@ export default function Services() {
         </Box>
 
         <Banner />
+        <Box sx={{ position: "relative", width: "100%" }}>
+          <Box sx={{ ...styles.content }} className="container">
+            <Box
+              component="img"
+              src={Rate}
+              sx={{
+                width: 350,
+                height: 350,
+                aspectRatio: "1/1",
 
-        <Box sx={styles.content} className="container">
-          <Box>
-            <Swiper size={images.length} width={500}>
+                zIndex: 100,
+              }}
+            />
+
+            <Swiper size={images.length} width={500} {...{ Index, setIndex }}>
               <Stack direction="row">
                 {images.map((row) => (
                   <Box sx={styles.slides}>
@@ -71,9 +86,7 @@ export default function Services() {
                           key={image.url}
                           width={500}
                         />
-
                         {/* {idx > 0 && ( */}
-
                         <Box
                           sx={{
                             position: "absolute",
@@ -85,7 +98,6 @@ export default function Services() {
                             color: ({ palette }) => palette.primary.light,
 
                             display: "flex",
-                            gap: 2,
                             width: "100%",
                           }}
                         >
@@ -108,37 +120,51 @@ export default function Services() {
               </Stack>
             </Swiper>
 
-            <Indicator value={2} />
-          </Box>
+            <Box>
+              <Typography variant="h1" sx={styles.mainTitle}>
+                Our
+              </Typography>
 
-          <Box>
-            <Typography variant="h1" sx={styles.mainTitle}>
-              Our
-            </Typography>
-
-            <Typography variant="h1" sx={styles.mainTitle} className="redText">
-              Services
-            </Typography>
-
-            <Typography variant="body2" sx={styles.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </Typography>
-
-            <Button sx={styles.button} variant="contained">
-              <Stack
-                direction="row"
-                justifyContent="space-around"
-                width="100%"
-                alignItems="center"
-                py={0.5}
+              <Typography
+                variant="h1"
+                sx={{
+                  ...styles.mainTitle,
+                  color: ({ palette }) => palette.error.main,
+                }}
+                className="redText"
               >
-                <Typography>Explore More</Typography>
+                Services
+              </Typography>
 
-                <Box>
-                  <img src={RightArrowIcon} width={22} height={20} />
-                </Box>
-              </Stack>
-            </Button>
+              <Typography variant="body2" sx={styles.text}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </Typography>
+
+              <Button sx={styles.button} variant="contained">
+                <Stack
+                  direction="row"
+                  justifyContent="space-around"
+                  width="100%"
+                  alignItems="center"
+                  py={0.5}
+                >
+                  <Typography>Explore More</Typography>
+
+                  <Box>
+                    <img src={RightArrowIcon} width={22} height={20} />
+                  </Box>
+                </Stack>
+              </Button>
+              <Box
+                component="img"
+                src={Camera}
+                sx={{
+                  width: 400,
+                  height: 400,
+                  zIndex: 100,
+                }}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>

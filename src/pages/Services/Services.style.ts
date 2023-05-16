@@ -8,7 +8,16 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
 
     mt: "50px",
   },
-
+  text: {
+    my: 2,
+    mb: 3,
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 20,
+    lineHeight: "120.5%",
+    letterSpacing: "0.033em",
+  },
   container: {
     label: "servicesContainer",
 
@@ -93,6 +102,14 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     bottom: "20px",
 
     right: 0,
+  },
+  mainTitle: {
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 700,
+    fontSize: 98,
+    lineHeight: "120.5%",
+    letterSpacing: "0.033em",
   },
 };
 
