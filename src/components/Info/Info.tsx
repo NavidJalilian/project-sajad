@@ -49,10 +49,6 @@ export default function Info() {
             </Typography>
           </Box>
         </Box>
-
-        <Typography variant="h2" sx={styles.slogan}>
-          Our job, <span className="textRed">your spotlight.</span>
-        </Typography>
       </Box>
     </Box>
   );

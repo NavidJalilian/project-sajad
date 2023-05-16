@@ -1,20 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  IconButton,
-  OutlinedInput,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import styles from "./Services.style";
 import InfoRightImg from "../../assets/images/info-right.jpg";
 import InfoMiddleImg from "../../assets/images/info-middle.jpg";
 import InfoLeftImg from "../../assets/images/info-left.jpg";
-import apartmentIcon from "../../assets/images/apartment.svg";
-import copyIcon from "../../assets/images/copy.svg";
-import movieIcon from "../../assets/images/movie.svg";
-import DeskImg from "../../assets/images/desk.png";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
 import Swiper from "../Swiper";
 
@@ -48,7 +37,7 @@ export default function Services() {
         </Swiper>
         <Box sx={styles.slides}></Box>
 
-        <Box sx={styles.content}>
+        <Box sx={styles.content} className="container">
           <Typography variant="h1" sx={styles.mainTitle}>
             Our
           </Typography>

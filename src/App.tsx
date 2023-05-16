@@ -12,8 +12,8 @@ function App() {
       <Landing />
       <Info />
       <Sales />
-      <Cases />
       <Services />
+      <Cases />
       <NewsLetter />
       <Footer />
     </div>
