@@ -68,7 +68,14 @@ const Swiper = ({
           {children}
         </Box>
       </Box>
-      <Stack direction="row" alignItems="center" justifyContent="space-between">
+      <Stack
+        direction="row"
+        alignItems="center"
+        justifyContent={
+          variant === "outline" ?  "space-between ": "space-around"
+        }
+        
+      >
         {prev && (
           <Button
             sx={{
@@ -99,7 +106,7 @@ const Swiper = ({
             disabled={Index === maxIndex}
           >
             <Box
-              sx={{ position: "absolute", left: "100%" ,bottom:"150%"}}
+              sx={{ position: "absolute", left: "100%", bottom: "150%" }}
               component="img"
               src={Arrow}
             />
