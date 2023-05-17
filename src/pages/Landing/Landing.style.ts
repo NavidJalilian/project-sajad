@@ -6,7 +6,6 @@ const styles: StylesType<"root" | "content"> = {
     "& .MuiTabs-indicator": {
       backgroundColor: ({ palette }) => palette.error.light,
     },
-
   },
   tab: {
     color: ({ palette }) => palette.primary.dark,
@@ -35,10 +34,16 @@ const styles: StylesType<"root" | "content"> = {
   },
   description: {
     maxWidth: "773px",
-    fontSize: "40px",
     my: 4.5,
-    lineHeight: 0.98,
-    color: ({ palette }) => palette.error.main,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "40px",
+    lineHeight: "98%",
+    letterSpacing: "0.033em",
+    color: ({ palette }) => palette.primary.light,
+    ".redText": {
+      color: ({ palette }) => palette.error.main,
+    },
   },
   button: {
     maxWidth: "250px",
