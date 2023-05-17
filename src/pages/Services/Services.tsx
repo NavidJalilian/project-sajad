@@ -47,7 +47,7 @@ export default function Services() {
         <Banner />
 
         <Box
-          sx={{ position: "relative", width: "100%", mb: 8 }}
+          sx={{ position: "relative", width: "100%", mb: 8, zIndex: 10 }}
           className="container"
         >
           <Box sx={{ ...styles.content }}>
