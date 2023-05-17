@@ -53,7 +53,7 @@ const Swiper = ({
   return (
     <Box>
       <Box
-        sx={{ ...styles.swiperContainer, width }}
+        sx={{ ...styles.swiperContainer, position: "relative", width }}
         onMouseUp={handleMouseUp}
         onMouseDown={handleMouseDown}
       >
@@ -68,14 +68,13 @@ const Swiper = ({
           {children}
         </Box>
       </Box>
-      <Stack direction="row" alignItems="center" justifyContent="space-around">
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
         {prev && (
           <Button
             sx={{
               color: ({ palette }) => palette.error.main,
-              transform: "rotate(180deg)", 
-                bgcolor: ({ palette }) => palette.primary.light,
-              
+              transform: "rotate(180deg)",
+              bgcolor: ({ palette }) => palette.primary.light,
             }}
             variant="contained"
             onClick={handlePrevClick}
@@ -94,8 +93,16 @@ const Swiper = ({
           <Indicator {...{ Index, setIndex, size, maxWidth: indicatorWidth }} />
         )}
         {variant === "outline" && (
-          <Button variant="text" onClick={handleNextClick} disabled={Index === maxIndex}>
-            <Box sx={{}} component="img" src={Arrow} />
+          <Button
+            variant="text"
+            onClick={handleNextClick}
+            disabled={Index === maxIndex}
+          >
+            <Box
+              sx={{ position: "absolute", left: "100%" ,bottom:"150%"}}
+              component="img"
+              src={Arrow}
+            />
           </Button>
         )}
         {variant === "filled" && (

@@ -7,7 +7,7 @@ export default function Indicator({ Index, setIndex, size, maxWidth = 100 }) {
   const states = Array.from({ length: size }, (_, index) => index);
   console.log(width, states);
   return (
-    <Stack direction="row">
+    <Stack direction="row" py={2}>
       {states.map((item, idx) => (
         <ButtonBase
           onClick={() => setIndex(item)}

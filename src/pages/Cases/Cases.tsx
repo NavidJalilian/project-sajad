@@ -94,7 +94,7 @@ const data = [
 
 export default function Cases() {
   return (
-    <Box className="container" id={pageIds[1]}>
+    <Box className="container" id={pageIds[1]} pt={14}>
       <Swiper
         size={data.length}
         showIndicator={true}
