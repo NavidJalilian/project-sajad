@@ -91,7 +91,7 @@ const Swiper = ({
         )}
         {variant === "outline" && (
           <Button onClick={handleNextClick} disabled={Index === maxIndex}>
-            <Box sx={{}} component="img" src={RightArrow} />
+            <Box sx={{}} component="img" src={Arrow} />
           </Button>
         )}
         {variant === "filled" && (
