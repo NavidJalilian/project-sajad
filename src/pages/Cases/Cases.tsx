@@ -61,12 +61,38 @@ const data = [
       images: [Boy1Img, Boy2Img],
     },
   ],
+  [
+    {
+      type: 1,
+      labels: ["Our", "case", "Studies"],
+      descriptions: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      ],
+      images: [Girl1Img],
+    },
+    {
+      type: 2,
+      labels: [],
+      descriptions: [
+        "Lorem ipsum",
+        "dolor sit amet, consectetur adipiscing elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      ],
+      images: [Girl2Img],
+    },
+    {
+      type: 3,
+      labels: ["The best consultant we’ve ever had"],
+      descriptions: ["-Revenson’s Group"],
+      images: [Boy1Img, Boy2Img],
+    },
+  ],
 ];
 
 export default function Cases() {
   return (
     <Box className="container">
-      <Swiper size={data.length} showIndicator={true} width={1030}>
+      <Swiper size={data.length} showIndicator={true} width={1030} next prev >
         <Stack direction="row">
           {data.map((row, rowIndex) => (
             <Box key={rowIndex} sx={styles.grid} width={1030}>

@@ -3,7 +3,7 @@ import { StylesType } from "../../theme/type";
 const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
   root: {
     label: "services",
-
+    overflow: "hidden",
     backgroundColor: ({ palette }) => palette.grey["100"],
 
     mt: "50px",
@@ -92,7 +92,6 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
 
   content: {
     display: "flex",
-
     mt: "112px",
   },
 

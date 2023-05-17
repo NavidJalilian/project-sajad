@@ -59,72 +59,72 @@ export default function Services() {
                 width: 350,
                 height: 350,
                 aspectRatio: "1/1",
-
                 zIndex: 100,
               }}
             />
-
-            <Swiper
-              size={images.length}
-              width={500}
-              {...{ Index, setIndex }}
-              showIndicator
-            >
-              <Stack direction="row">
-                {images.map((row) => (
-                  <Box sx={styles.slides}>
-                    {row.map((image, idx) => (
-                      <Box
-                        sx={{
-                          position: "relative",
-                        }}
-                      >
-                        <Box
-                          component="img"
-                          sx={{
-                            flexGrow: 1,
-                            borderRadius: 4,
-                            flexShrink: 0,
-                          }}
-                          src={image.url}
-                          alt={image.label}
-                          key={image.url}
-                          width={500}
-                        />
-                        {/* {idx > 0 && ( */}
+            <Box sx={{ translate: "translate(-500px)", bgcolor: "red" }}>
+              <Swiper
+                size={images.length}
+                width={500}
+                {...{ Index, setIndex }}
+                showIndicator
+                next
+              >
+                <Stack direction="row">
+                  {images.map((row) => (
+                    <Box sx={styles.slides} key={crypto.randomUUID()}>
+                      {row.map((image, idx) => (
                         <Box
                           sx={{
-                            position: "absolute",
-
-                            bottom: 20,
-
-                            left: 0,
-
-                            color: ({ palette }) => palette.primary.light,
-
-                            display: "flex",
-                            width: "100%",
+                            position: "relative",
                           }}
                         >
-                          <Typography sx={styles.imgLabel} mx={1}>
-                            {String(image.id).length < 2
-                              ? "0" + image.id
-                              : image.id}
-                          </Typography>
+                          <Box
+                            component="img"
+                            sx={{
+                              flexGrow: 1,
+                              borderRadius: 4,
+                              flexShrink: 0,
+                            }}
+                            src={image.url}
+                            alt={image.label}
+                            key={image.url}
+                            width={500}
+                          />
+                          {/* {idx > 0 && ( */}
+                          <Box
+                            sx={{
+                              position: "absolute",
 
-                          <Typography sx={styles.imgLabel} mx={1}>
-                            {image.label}
-                          </Typography>
+                              bottom: 20,
+
+                              left: 0,
+
+                              color: ({ palette }) => palette.primary.light,
+
+                              display: "flex",
+                              width: "100%",
+                            }}
+                          >
+                            <Typography sx={styles.imgLabel} mx={1}>
+                              {String(image.id).length < 2
+                                ? "0" + image.id
+                                : image.id}
+                            </Typography>
+
+                            <Typography sx={styles.imgLabel} mx={1}>
+                              {image.label}
+                            </Typography>
+                          </Box>
+
+                          {/* )} */}
                         </Box>
-
-                        {/* )} */}
-                      </Box>
-                    ))}
-                  </Box>
-                ))}
-              </Stack>
-            </Swiper>
-
+                      ))}
+                    </Box>
+                  ))}
+                </Stack>
+              </Swiper>
+            </Box>
             <Box>
               <Typography variant="h1" sx={styles.mainTitle}>
                 Our

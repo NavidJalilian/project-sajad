@@ -1,13 +1,13 @@
 import { Box, ButtonBase, Stack } from "@mui/material";
 import React, { useState } from "react";
 
-export default function Indicator({ Index, setIndex }) {
-  const width = 100;
+export default function Indicator({ Index, setIndex, size, maxWidth = 100 }) {
+  const width = maxWidth;
   const height = 12;
-  const states = [0, 1];
-
+  const states = Array.from({ length: size }, (_, index) => index);
+  console.log(width, states);
   return (
-    <Stack direction="row" width={100}>
+    <Stack direction="row">
       {states.map((item, idx) => (
         <ButtonBase
           onClick={() => setIndex(item)}
@@ -17,7 +17,7 @@ export default function Indicator({ Index, setIndex }) {
               item === Index
                 ? ({ palette }) => palette.error.light
                 : ({ palette }) => palette.grey[200],
-            width: (width / states.length) * 100 + "%",
+            width: width / states.length + "px",
             height,
             borderRadius:
               idx === 0
