@@ -7,6 +7,7 @@ import Boy1Img from "../../assets/images/boy1.jpg";
 import Boy2Img from "../../assets/images/boy2.jpg";
 import CaseRow from "./CaseRow";
 import Swiper from "../../components/Swiper";
+import { pageIds } from "../Landing/Landing";
 
 const data = [
   [
@@ -91,7 +92,7 @@ const data = [
 
 export default function Cases() {
   return (
-    <Box className="container">
+    <Box className="container" id={pageIds[1]}>
       <Swiper size={data.length} showIndicator={true} width={1030} next prev >
         <Stack direction="row">
           {data.map((row, rowIndex) => (

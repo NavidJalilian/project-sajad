@@ -4,6 +4,7 @@ import Number from "../../components/Number/Number";
 import Play from "../../assets/images/play.svg";
 import Status from "../../assets/images/status.jpg";
 import styles from "./Sales.style";
+import { pageIds } from "../Landing/Landing";
 
 export default function Sales() {
   const [Values, setValues] = React.useState([
@@ -13,7 +14,7 @@ export default function Sales() {
   ]);
 
   return (
-    <Box sx={styles.root} className="container">
+    <Box sx={styles.root} className="container" id={pageIds[2]}>
       <Stack direction="row" justifyContent="center" gap={1.5} p={1}>
         {Values.map((item) => (
           <Number {...{ value: item.value, label: item.title }} />
