@@ -1,6 +1,6 @@
 import { StylesType } from "../../theme/type";
 
-const styles: StylesType<"root" | "title" | "label"> = {
+const styles: StylesType<"root"> = {
   root: {
     backgroundColor: ({ palette }) => palette.primary[900],
     color: ({ palette }) => palette.primary.light,
@@ -29,8 +29,18 @@ const styles: StylesType<"root" | "title" | "label"> = {
   },
   headerLink: {
     fontSize: " 22px",
-
     color: ({ palette }) => palette.primary.light,
+  },
+  copyright: {
+    textAlign: "center",
+    mb: "102px",
+    color: ({ palette }) => palette.primary.light,
+    fontFamily: "Inter",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "17px",
+    lineHeight: "108%",
+    letterSpacing: "-0.027em",
   },
 };
 
