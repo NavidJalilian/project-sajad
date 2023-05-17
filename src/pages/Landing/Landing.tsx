@@ -48,8 +48,9 @@ export default function Landing() {
           Jacob Bowman
         </Typography>
         <Typography sx={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lectus
-          quam, facilisis id semper faucibus,
+          Lorem ipsum dolor sit{" "}
+          <span className="redText">amet, consectetur</span> adipiscing elit.
+          Duis lectus quam, facilisis id semper faucibus,
         </Typography>
         <Button sx={styles.button} variant="contained">
           <Stack
