@@ -2,6 +2,7 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
 import LapTop from "../../assets/images/laptop.jpg";
 import Arrow from "../../assets/images/arrow.svg";
+import RightArrow from "../../assets/images/rightArrow.svg";
 import RightArrowRed from "../../assets/images/rightArrow.svg";
 import styles from "./Swiper.style";
 import Indicator from "../Indicator/Indicator";
