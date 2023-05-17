@@ -20,13 +20,21 @@ export default function Info() {
 
         <Box sx={styles.images}>
           <Swiper size={6}>
-            <Stack direction="row" gap={1.5}>
-              <img src={InfoLeftImg} alt="Info Left Img" />
-              <img src={InfoMiddleImg} alt="Info Middle Img" />
-              <img src={InfoRightImg} alt="Info Right Img" />
-              <img src={InfoLeftImg} alt="Info Left Img" />
-              <img src={InfoMiddleImg} alt="Info Middle Img" />
-              <img src={InfoRightImg} alt="Info Right Img" />
+            <Stack direction="row" gap={1.5} sx={{ pointerEvents: "none" }}>
+              <img src={InfoLeftImg} alt="Info Left Img" draggable={false} />
+              <img
+                src={InfoMiddleImg}
+                alt="Info Middle Img"
+                draggable={false}
+              />
+              <img src={InfoRightImg} alt="Info Right Img" draggable={false} />
+              <img src={InfoLeftImg} alt="Info Left Img" draggable={false} />
+              <img
+                src={InfoMiddleImg}
+                alt="Info Middle Img"
+                draggable={false}
+              />
+              <img src={InfoRightImg} alt="Info Right Img" draggable={false} />
             </Stack>
           </Swiper>
         </Box>

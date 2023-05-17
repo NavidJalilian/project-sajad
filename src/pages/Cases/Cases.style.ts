@@ -6,6 +6,8 @@ const styles: StylesType<"grid"> = {
     color: ({ palette }) => palette.primary[900],
     display: "flex",
     flexDirection: "column",
+    flexGrow: 1,
+    flexShrink: 0,
     gap: 6,
     py: 2,
   },
