@@ -73,10 +73,14 @@ const Swiper = ({
           <Button
             sx={{
               color: ({ palette }) => palette.error.main,
-              transform: "rotate(180deg)",
+              transform: "rotate(180deg)", 
+                bgcolor: ({ palette }) => palette.primary.light,
+              
             }}
+            variant="contained"
             onClick={handlePrevClick}
             disabled={Index === 0}
+            disableElevation
           >
             <Box
               component="img"
@@ -90,7 +94,7 @@ const Swiper = ({
           <Indicator {...{ Index, setIndex, size, maxWidth: indicatorWidth }} />
         )}
         {variant === "outline" && (
-          <Button onClick={handleNextClick} disabled={Index === maxIndex}>
+          <Button variant="text" onClick={handleNextClick} disabled={Index === maxIndex}>
             <Box sx={{}} component="img" src={Arrow} />
           </Button>
         )}
