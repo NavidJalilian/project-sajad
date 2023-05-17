@@ -4,7 +4,7 @@ import styles from "./Landing.style";
 import HeroImg from "../../assets/images/hero.jpg";
 import RightArrowIcon from "../../assets/images/rightArrow.svg";
 
-const pagesId = ["about us"];
+export const pageIds = ["about us", "case studies", "services"];
 
 export default function Landing() {
   return (

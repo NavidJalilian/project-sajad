@@ -8,10 +8,11 @@ import apartmentIcon from "../../assets/images/apartment.svg";
 import copyIcon from "../../assets/images/copy.svg";
 import movieIcon from "../../assets/images/movie.svg";
 import Swiper from "../Swiper";
+import { pageIds } from "../../pages/Landing/Landing";
 
 export default function Info() {
   return (
-    <Box sx={styles.root} id="about us">
+    <Box sx={styles.root} id={pageIds[0]}>
       <Box sx={styles.container} className="container">
         <Typography sx={styles.chooseUs}>Choose us</Typography>
         <Typography variant="h1" sx={styles.mainTitle}>
