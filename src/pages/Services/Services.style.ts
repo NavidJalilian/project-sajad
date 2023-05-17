@@ -26,6 +26,15 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     color: ({ palette }) => palette.primary.light,
     textTransform: "capitalize",
     padding: "16px 24px",
+    fontFamily: "Outfit",
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: "26px",
+    lineHeight: "120.5%",
+    display: "flex",
+    alignItems: "center",
+    letterSpacing: "0.013em",
+
     img: {
       ml: 2,
     },
@@ -94,7 +103,7 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     width: 350,
     height: 350,
     aspectRatio: "1/1",
-    zIndex: 100,
+    zIndex: 1,
     position: "absolute",
     left: "-70px",
     top: "962px",
@@ -102,7 +111,7 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
   cameraImg: {
     width: 400,
     height: 400,
-    zIndex: 100,
+    zIndex: 1,
     position: "absolute",
     right: "-50px",
     top: "1350px",

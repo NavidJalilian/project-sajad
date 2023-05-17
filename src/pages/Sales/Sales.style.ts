@@ -17,11 +17,14 @@ const styles: StylesType<"root" | "title" | "label"> = {
     lineHeight: 1,
   },
   description: {
+    fontFamily: "Outfit",
+    fontStyle: "normal",
     fontWeight: 400,
-
-    fontSize: 20,
-    maxWidth: 251,
-    lineHeight: 1.2,
+    fontSize: "24.7104px",
+    lineHeight: "120.5%",
+    display: "flex",
+    alignItems: "center",
+    letterSpacing: "0.033em",
   },
 };
 
