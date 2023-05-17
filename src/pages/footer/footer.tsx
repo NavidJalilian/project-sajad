@@ -13,10 +13,9 @@ export default function Footer() {
   const preventDefault = (event: React.SyntheticEvent) =>
     event.preventDefault();
   return (
-    <Box>
+    <Box sx={styles.root}>
       <Stack
         component="footer"
-        sx={styles.root}
         gap={2}
         direction="row"
         justifyContent="space-between"
@@ -70,6 +69,10 @@ export default function Footer() {
           ))}
         </Stack>
       </Stack>
+      <Typography sx={styles.copyright}>
+        All right reserved by Jacob.
+      </Typography>
+      ;
     </Box>
   );
 }

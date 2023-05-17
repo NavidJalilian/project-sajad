@@ -16,17 +16,12 @@ import Camera from "../../assets/images/camera.svg";
 const images = [
   [
     { url: InfoLeftImg, label: "Commercials", id: 1 },
-
     { url: InfoMiddleImg, label: "Consulting", id: 2 },
-
     { url: InfoRightImg, label: "Company", id: 3 },
   ],
-
   [
     { url: InfoLeftImg, label: "Personnel", id: 4 },
-
     { url: InfoMiddleImg, label: "Services", id: 5 },
-
     { url: InfoRightImg, label: "Organization", id: 6 },
   ],
 ];
@@ -50,19 +45,13 @@ export default function Services() {
         </Box>
 
         <Banner />
-        <Box sx={{ position: "relative", width: "100%" }}>
-          <Box sx={{ ...styles.content }} className="container">
-            <Box
-              component="img"
-              src={Rate}
-              sx={{
-                width: 350,
-                height: 350,
-                aspectRatio: "1/1",
-                zIndex: 100,
-              }}
-            />
-            <Box sx={{ translate: "translate(-500px)", bgcolor: "red" }}>
+
+        <Box
+          sx={{ position: "relative", width: "100%", mb: 8 }}
+          className="container"
+        >
+          <Box sx={{ ...styles.content }}>
+            <Box sx={{ translate: "translate(-500px)" }}>
               <Swiper
                 size={images.length}
                 width={500}
@@ -154,24 +143,17 @@ export default function Services() {
                   py={0.5}
                 >
                   <Typography>Explore More</Typography>
-
                   <Box>
                     <img src={RightArrowIcon} width={22} height={20} />
                   </Box>
                 </Stack>
               </Button>
-              <Box
-                component="img"
-                src={Camera}
-                sx={{
-                  width: 400,
-                  height: 400,
-                  zIndex: 100,
-                }}
-              />
             </Box>
           </Box>
         </Box>
+
+        <Box component="img" src={Camera} sx={styles.cameraImg} />
+        <Box component="img" src={Rate} sx={styles.rateImg} />
       </Box>
     </Box>
   );
