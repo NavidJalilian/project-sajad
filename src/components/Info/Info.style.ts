@@ -5,6 +5,7 @@ const styles: StylesType<"root" | "features" | "images"> = {
     label: "infoBox",
     backgroundColor: ({ palette }) => palette.primary.light,
     margin: 2,
+    display:'block',
   },
   container: {
     label: "infoBoxContainer",

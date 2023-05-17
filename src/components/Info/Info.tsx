@@ -11,7 +11,7 @@ import Swiper from "../Swiper";
 
 export default function Info() {
   return (
-    <Box sx={styles.root}>
+    <Box sx={styles.root} id="about us">
       <Box sx={styles.container} className="container">
         <Typography sx={styles.chooseUs}>Choose us</Typography>
         <Typography variant="h1" sx={styles.mainTitle}>

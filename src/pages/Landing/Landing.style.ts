@@ -6,10 +6,11 @@ const styles: StylesType<"root" | "content"> = {
     "& .MuiTabs-indicator": {
       backgroundColor: ({ palette }) => palette.error.light,
     },
+
   },
   tab: {
     color: ({ palette }) => palette.primary.dark,
-    "&.Mui-selected": {
+    "&:hover": {
       color: ({ palette }) => palette.error.light,
     },
     textTransform: "lowercase",
