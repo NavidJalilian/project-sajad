@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import LapTop from "../../assets/images/laptop.jpg";
 import Arrow from "../../assets/images/arrow.svg";
 import RightArrow from "../../assets/images/rightArrow.svg";
-import RightArrowRed from "../../assets/images/rightArrow.svg";
+import RightArrowRed from "../../assets/images/rightArrowRed.svg";
 import styles from "./Swiper.style";
 import Indicator from "../Indicator/Indicator";
 
@@ -70,8 +70,20 @@ const Swiper = ({
       </Box>
       <Stack direction="row" alignItems="center" justifyContent="space-around">
         {prev && (
-          <Button onClick={handleNextClick} disabled={Index === maxIndex}>
-            <Box component="img" src={RightArrow} />
+          <Button
+            sx={{
+              color: ({ palette }) => palette.error.main,
+              transform: "rotate(180deg)",
+            }}
+            onClick={handlePrevClick}
+            disabled={Index === 0}
+          >
+            <Box
+              component="img"
+              src={RightArrowRed}
+              maxWidth={22}
+              maxHeight={22}
+            />
           </Button>
         )}
         {showIndicator && (
@@ -79,11 +91,21 @@ const Swiper = ({
         )}
         {variant === "outline" && (
           <Button onClick={handleNextClick} disabled={Index === maxIndex}>
-            <Box component="img" src={Arrow} />
+            <Box sx={{}} component="img" src={RightArrow} />
           </Button>
         )}
         {variant === "filled" && (
-          <Button onClick={handleNextClick} disabled={Index === maxIndex}>
+          <Button
+            sx={{
+              bgcolor: ({ palette }) => palette.error.main,
+              py: 4,
+              px: 8,
+              borderRadius: 8,
+            }}
+            variant="contained"
+            onClick={handleNextClick}
+            disabled={Index === maxIndex}
+          >
             <Box component="img" src={RightArrow} />
           </Button>
         )}
