@@ -10,10 +10,11 @@ const Swiper = ({
   size = 2,
   width,
   showIndicator = false,
-  next,
+
   prev,
-  movePerItem,
-  indicatorSize,
+  indicatorWidth = 350,
+
+  variant,
 }) => {
   const [Index, setIndex] = useState(0);
   const maxIndex = size - 1;
@@ -59,9 +60,7 @@ const Swiper = ({
             flexGrow: 1,
             transition: "transform 0.3s ease-in-out",
             width,
-            transform: movePerItem
-              ? `translateX(-${Index * 100}%)`
-              : `translateX(-${Index * 100}%)`,
+            transform: `translateX(-${Index * 100}%)`,
           }}
         >
           {children}
@@ -74,9 +73,14 @@ const Swiper = ({
           </Button>
         )}
         {showIndicator && (
-          <Indicator {...{ Index, setIndex, size, maxWidth: 350 }} />
+          <Indicator {...{ Index, setIndex, size, maxWidth: indicatorWidth }} />
         )}
-        {next && (
+        {variant === "outline" && (
+          <Button onClick={handleNextClick} disabled={Index === maxIndex}>
+            <Box component="img" src={Arrow} />
+          </Button>
+        )}
+        {variant === "filled" && (
           <Button onClick={handleNextClick} disabled={Index === maxIndex}>
             <Box component="img" src={Arrow} />
           </Button>

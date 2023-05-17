@@ -57,7 +57,8 @@ export default function Services() {
                 width={500}
                 {...{ Index, setIndex }}
                 showIndicator
-                next
+                variant="outline"
+                indicatorWidth={110}
               >
                 <Stack direction="row">
                   {images.map((row) => (

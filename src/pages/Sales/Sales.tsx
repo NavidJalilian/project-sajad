@@ -15,7 +15,7 @@ export default function Sales() {
 
   return (
     <Box sx={styles.root} className="container" id={pageIds[2]}>
-      <Stack direction="row" justifyContent="center" gap={1.5} p={1}>
+      <Stack direction="row" justifyContent="center" gap={1.5} p={1} >
         {Values.map((item) => (
           <Number {...{ value: item.value, label: item.title }} />
         ))}

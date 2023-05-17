@@ -8,6 +8,8 @@ import Boy2Img from "../../assets/images/boy2.jpg";
 import CaseRow from "./CaseRow";
 import Swiper from "../../components/Swiper";
 import { pageIds } from "../Landing/Landing";
+import Arrow from "../../assets/images/arrow.svg";
+import { Button } from "@mui/base";
 
 const data = [
   [
@@ -93,7 +95,13 @@ const data = [
 export default function Cases() {
   return (
     <Box className="container" id={pageIds[1]}>
-      <Swiper size={data.length} showIndicator={true} width={1030} next prev >
+      <Swiper
+        size={data.length}
+        showIndicator={true}
+        width={1030}
+        variant="outline"
+        prev
+      >
         <Stack direction="row">
           {data.map((row, rowIndex) => (
             <Box key={rowIndex} sx={styles.grid} width={1030}>
