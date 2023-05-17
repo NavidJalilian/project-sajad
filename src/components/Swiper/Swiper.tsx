@@ -2,6 +2,7 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
 import LapTop from "../../assets/images/laptop.jpg";
 import Arrow from "../../assets/images/arrow.svg";
+import RightArrowRed from "../../assets/images/rightArrow.svg";
 import styles from "./Swiper.style";
 import Indicator from "../Indicator/Indicator";
 
@@ -69,7 +70,7 @@ const Swiper = ({
       <Stack direction="row" alignItems="center" justifyContent="space-around">
         {prev && (
           <Button onClick={handleNextClick} disabled={Index === maxIndex}>
-            <Box component="img" src={Arrow} />
+            <Box component="img" src={RightArrow} />
           </Button>
         )}
         {showIndicator && (
@@ -82,7 +83,7 @@ const Swiper = ({
         )}
         {variant === "filled" && (
           <Button onClick={handleNextClick} disabled={Index === maxIndex}>
-            <Box component="img" src={Arrow} />
+            <Box component="img" src={RightArrow} />
           </Button>
         )}
       </Stack>

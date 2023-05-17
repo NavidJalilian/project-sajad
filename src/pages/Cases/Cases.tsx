@@ -99,7 +99,7 @@ export default function Cases() {
         size={data.length}
         showIndicator={true}
         width={1030}
-        variant="outline"
+        variant="filled"
         prev
       >
         <Stack direction="row">
