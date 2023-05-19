@@ -49,6 +49,7 @@ export default function Sales() {
             borderRadius: 8,
             maxWidth: 840,
             maxHeight: 527,
+            
           }}
           component="img"
           src={Status}

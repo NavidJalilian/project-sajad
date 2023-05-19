@@ -107,6 +107,7 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     position: "absolute",
     left: "-70px",
     top: "962px",
+    objectFit:"initial",
   },
   cameraImg: {
     width: 400,
@@ -114,6 +115,7 @@ const styles: StylesType<"root" | "slides" | "content" | "imgLabel"> = {
     zIndex: 1,
     position: "absolute",
     right: "-50px",
+    objectFit:"initial",
     top: "1350px",
   },
 };
